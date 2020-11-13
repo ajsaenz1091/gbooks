@@ -21,7 +21,7 @@ class App extends Component {
               <td>Book</td>
               <td>2.5</td>
               <td>
-                <Button color="success" size="sm">Edit</Button>
+                <Button color="success" size="sm" className="mr-2">Edit</Button>
                 <Button color="danger" size="sm">Delete</Button>
               </td>
             </tr>
