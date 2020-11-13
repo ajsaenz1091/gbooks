@@ -1,8 +1,22 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import { Table, Button } from 'reactstrap';
 
 
+
 class App extends Component {
+  constructor(){
+    super()
+    this.state = {
+      books: [],
+    }
+  }
+
+  componentWillUnmount(){
+    axios.get('http://localhost:3000/books')
+    .then((response) => {this.setState({books: response.data})})
+  }
+
   render(){
     return (
       <div className="App container">
